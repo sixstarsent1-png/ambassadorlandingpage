@@ -2,16 +2,18 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Sparkles } from "lucide-react"
+import { Menu, X, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Benefits", href: "#benefits" },
+  { name: "Events", href: "#events" },
   { name: "Tiers", href: "#tiers" },
   { name: "Markets", href: "#markets" },
-  { name: "Apply", href: "#apply" },
 ]
+
+const APPLY_URL = "https://sixstarent.com/ambassador-sign-up/"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -45,18 +47,15 @@ export function Navigation() {
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ delay: i * 0.05, type: "spring", stiffness: 200 }}
                   >
-                    <Sparkles 
-                      className={`w-3 h-3 ${
-                        i % 3 === 0 ? "text-neon-purple" : 
-                        i % 3 === 1 ? "text-neon-pink" : "text-neon-cyan"
-                      } group-hover:scale-110 transition-transform`}
+                    <Star 
+                      className="w-3 h-3 text-gold fill-gold group-hover:scale-110 transition-transform"
                       style={{ transitionDelay: `${i * 30}ms` }}
                     />
                   </motion.div>
                 ))}
               </div>
             </div>
-            <span className="font-black text-lg tracking-tight gradient-text">SIX STARS</span>
+            <span className="font-black text-lg tracking-tight text-gold">SIX STARS</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -67,10 +66,10 @@ export function Navigation() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.05 }}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group font-medium"
+                className="text-sm text-muted-foreground hover:text-gold transition-colors relative group font-medium"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neon-purple to-neon-pink group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-gold-light group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>
@@ -78,9 +77,9 @@ export function Navigation() {
           <div className="hidden md:block">
             <Button 
               asChild 
-              className="bg-gradient-to-r from-neon-purple to-neon-pink hover:opacity-90 text-white font-bold px-6 glow-purple"
+              className="bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-black font-bold px-6 glow-gold"
             >
-              <a href="#apply">Apply Now</a>
+              <a href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply Now</a>
             </Button>
           </div>
 
@@ -133,7 +132,7 @@ export function Navigation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+                    className="text-muted-foreground hover:text-gold transition-colors py-2 font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -141,9 +140,9 @@ export function Navigation() {
                 ))}
                 <Button 
                   asChild 
-                  className="w-full bg-gradient-to-r from-neon-purple to-neon-pink hover:opacity-90 text-white font-bold mt-2"
+                  className="w-full bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-black font-bold mt-2"
                 >
-                  <a href="#apply" onClick={() => setIsMobileMenuOpen(false)}>Apply Now</a>
+                  <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>Apply Now</a>
                 </Button>
               </div>
             </motion.div>
@@ -159,9 +158,9 @@ export function Navigation() {
       >
         <Button 
           asChild 
-          className="w-full h-12 text-base font-bold bg-gradient-to-r from-neon-purple via-neon-pink to-neon-purple bg-[length:200%_100%] animate-pulse text-white"
+          className="w-full h-12 text-base font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-[length:200%_100%] animate-pulse text-black"
         >
-          <a href="#apply">Apply to Become an Ambassador</a>
+          <a href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply to Become an Ambassador</a>
         </Button>
       </motion.div>
     </>

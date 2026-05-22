@@ -19,49 +19,31 @@ const activities = [
     icon: Megaphone,
     title: "Promote Events",
     description: "Share events with your network",
-    colorClass: "text-neon-purple",
-    bgClass: "bg-neon-purple/20",
-    borderClass: "hover:border-neon-purple/50",
   },
   {
     icon: Link2,
     title: "Share Links",
     description: "Earn commissions on every sale",
-    colorClass: "text-neon-pink",
-    bgClass: "bg-neon-pink/20",
-    borderClass: "hover:border-neon-pink/50",
   },
   {
     icon: Camera,
     title: "Create Content",
     description: "Build your portfolio",
-    colorClass: "text-neon-cyan",
-    bgClass: "bg-neon-cyan/20",
-    borderClass: "hover:border-neon-cyan/50",
   },
   {
     icon: Users,
     title: "Build Community",
     description: "Grow your local scene",
-    colorClass: "text-neon-gold",
-    bgClass: "bg-neon-gold/20",
-    borderClass: "hover:border-neon-gold/50",
   },
   {
     icon: PartyPopper,
     title: "Run Activations",
     description: "Help run campus events",
-    colorClass: "text-neon-purple",
-    bgClass: "bg-neon-purple/20",
-    borderClass: "hover:border-neon-purple/50",
   },
   {
     icon: Gift,
     title: "Earn Rewards",
     description: "Get paid & get perks",
-    colorClass: "text-neon-pink",
-    bgClass: "bg-neon-pink/20",
-    borderClass: "hover:border-neon-pink/50",
   },
 ]
 
@@ -79,8 +61,8 @@ export function WhatAmbassadorsDoSection() {
     <section id="about" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background blurs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-80 h-80 bg-neon-purple/15 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-neon-cyan/15 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -left-32 w-80 h-80 bg-gold/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-gold/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
@@ -97,11 +79,11 @@ export function WhatAmbassadorsDoSection() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
           >
-            <Flame className="w-4 h-4 text-neon-purple" />
-            <span className="text-xs font-bold uppercase tracking-widest text-neon-purple">What Ambassadors Do</span>
+            <Flame className="w-4 h-4 text-gold" />
+            <span className="text-xs font-bold uppercase tracking-widest text-gold">What Ambassadors Do</span>
           </motion.div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-balance max-w-3xl mx-auto">
-            Be the <span className="gradient-text">face of culture</span> in your city
+            Be the <span className="text-gold">face of culture</span> in your city
           </h2>
         </motion.div>
 
@@ -144,8 +126,8 @@ export function WhatAmbassadorsDoSection() {
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 
-                {/* Neon border glow */}
-                <div className="absolute inset-0 rounded-3xl ring-2 ring-neon-purple/30" />
+                {/* Gold border glow */}
+                <div className="absolute inset-0 rounded-3xl ring-2 ring-gold/30" />
               </motion.div>
             ))}
             
@@ -157,8 +139,8 @@ export function WhatAmbassadorsDoSection() {
               className="absolute -bottom-2 -right-2 z-20"
             >
               <div className="glass-card px-4 py-2 rounded-full flex items-center gap-2">
-                <Play className="w-4 h-4 text-neon-pink fill-neon-pink" />
-                <span className="text-sm font-bold text-neon-pink">Creating content</span>
+                <Play className="w-4 h-4 text-gold fill-gold" />
+                <span className="text-sm font-bold text-gold">Creating content</span>
               </div>
             </motion.div>
             
@@ -170,7 +152,7 @@ export function WhatAmbassadorsDoSection() {
             >
               <div className="glass-card px-4 py-2 rounded-full flex items-center gap-2">
                 <span className="text-lg">🔥</span>
-                <span className="text-sm font-bold text-neon-gold">VIP access</span>
+                <span className="text-sm font-bold text-gold">VIP access</span>
               </div>
             </motion.div>
 
@@ -200,16 +182,16 @@ export function WhatAmbassadorsDoSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
                 whileHover={{ y: -5, scale: 1.03 }}
-                className={`group glass-card rounded-2xl p-5 cursor-pointer transition-all duration-300 ${activity.borderClass}`}
+                className="group glass-card rounded-2xl p-5 cursor-pointer transition-all duration-300 hover:border-gold/50"
               >
                 <motion.div 
                   whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
                   transition={{ duration: 0.4 }}
-                  className={`w-12 h-12 rounded-xl ${activity.bgClass} flex items-center justify-center mb-3`}
+                  className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center mb-3"
                 >
-                  <activity.icon className={`w-6 h-6 ${activity.colorClass}`} />
+                  <activity.icon className="w-6 h-6 text-gold" />
                 </motion.div>
-                <h3 className="font-bold text-base mb-1 text-foreground">{activity.title}</h3>
+                <h3 className="font-bold text-base mb-1 text-foreground group-hover:text-gold transition-colors">{activity.title}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">{activity.description}</p>
               </motion.div>
             ))}

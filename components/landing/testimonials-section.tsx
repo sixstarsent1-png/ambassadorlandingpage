@@ -30,8 +30,8 @@ export function TestimonialsSection() {
     <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/4 w-80 h-80 bg-neon-pink/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-gold/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-gold/10 rounded-full blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
@@ -47,11 +47,11 @@ export function TestimonialsSection() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
           >
-            <Quote className="w-4 h-4 text-neon-pink" />
-            <span className="text-xs font-bold uppercase tracking-widest text-neon-pink">From Our Ambassadors</span>
+            <Quote className="w-4 h-4 text-gold" />
+            <span className="text-xs font-bold uppercase tracking-widest text-gold">From Our Ambassadors</span>
           </motion.div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-balance max-w-2xl mx-auto">
-            Real stories, <span className="gradient-text">real impact</span>
+            Real stories, <span className="text-gold">real impact</span>
           </h2>
         </motion.div>
 
@@ -63,10 +63,10 @@ export function TestimonialsSection() {
               animate={isInView ? { opacity: 1, y: 0, rotate: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="relative glass-card rounded-3xl p-6 md:p-8 cursor-pointer group overflow-hidden"
+              className="relative glass-card rounded-3xl p-6 md:p-8 cursor-pointer group overflow-hidden hover:border-gold/50 transition-all duration-300"
             >
               {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${index === 0 ? "from-neon-purple/10" : "from-neon-pink/10"} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
                 {/* Rating stars */}
@@ -74,7 +74,7 @@ export function TestimonialsSection() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star 
                       key={i} 
-                      className={`w-4 h-4 fill-neon-gold text-neon-gold`}
+                      className="w-4 h-4 fill-gold text-gold"
                     />
                   ))}
                 </div>
@@ -84,7 +84,7 @@ export function TestimonialsSection() {
                 </p>
                 
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-neon-purple/30 group-hover:ring-neon-purple/50 transition-all">
+                  <div className="relative w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-gold/30 group-hover:ring-gold/50 transition-all">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.author}
@@ -94,13 +94,13 @@ export function TestimonialsSection() {
                   </div>
                   <div>
                     <p className="font-bold text-foreground text-lg">{testimonial.author}</p>
-                    <p className={`text-sm font-medium ${index === 0 ? "text-neon-purple" : "text-neon-pink"}`}>{testimonial.role}</p>
+                    <p className="text-sm font-medium text-gold">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
 
               {/* Corner decoration */}
-              <div className={`absolute -bottom-6 -right-6 w-24 h-24 ${index === 0 ? "bg-neon-purple/10" : "bg-neon-pink/10"} rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500`} />
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gold/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
             </motion.div>
           ))}
         </div>

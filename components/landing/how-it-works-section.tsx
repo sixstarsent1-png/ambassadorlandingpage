@@ -17,40 +17,30 @@ const steps = [
     step: "01",
     title: "Apply",
     description: "Fill out the application form and tell us about yourself.",
-    colorClass: "text-neon-purple",
-    bgClass: "bg-neon-purple/20",
   },
   {
     icon: CheckCircle2,
     step: "02",
     title: "Get Approved",
     description: "We review your application and welcome you to the team.",
-    colorClass: "text-neon-pink",
-    bgClass: "bg-neon-pink/20",
   },
   {
     icon: Package,
     step: "03",
     title: "Get Resources",
     description: "Get your event links, missions, captions, and content toolkit.",
-    colorClass: "text-neon-cyan",
-    bgClass: "bg-neon-cyan/20",
   },
   {
     icon: Share2,
     step: "04",
     title: "Promote & Complete",
     description: "Share events, post content, sell tickets, and complete missions.",
-    colorClass: "text-neon-gold",
-    bgClass: "bg-neon-gold/20",
   },
   {
     icon: Trophy,
     step: "05",
     title: "Earn & Grow",
     description: "Get rewards, commissions, and unlock bigger opportunities.",
-    colorClass: "text-neon-purple",
-    bgClass: "bg-neon-purple/20",
   },
 ]
 
@@ -62,7 +52,7 @@ export function HowItWorksSection() {
     <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-neon-purple/5 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-gold/5 to-background" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
@@ -78,11 +68,11 @@ export function HowItWorksSection() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
           >
-            <ArrowRight className="w-4 h-4 text-neon-cyan" />
-            <span className="text-xs font-bold uppercase tracking-widest text-neon-cyan">How It Works</span>
+            <ArrowRight className="w-4 h-4 text-gold" />
+            <span className="text-xs font-bold uppercase tracking-widest text-gold">How It Works</span>
           </motion.div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-balance max-w-2xl mx-auto">
-            From application to <span className="gradient-text">activation</span>
+            From application to <span className="text-gold">activation</span>
           </h2>
         </motion.div>
 
@@ -91,7 +81,7 @@ export function HowItWorksSection() {
           {/* Desktop: horizontal flow */}
           <div className="hidden lg:flex items-start justify-between relative">
             {/* Connecting line */}
-            <div className="absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-purple via-neon-pink via-neon-cyan via-neon-gold to-neon-purple" />
+            <div className="absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-gold via-gold-light to-gold" />
             
             {steps.map((item, index) => (
               <motion.div
@@ -104,13 +94,13 @@ export function HowItWorksSection() {
                 {/* Step circle */}
                 <motion.div 
                   whileHover={{ scale: 1.1 }}
-                  className={`w-20 h-20 rounded-3xl ${item.bgClass} flex items-center justify-center mb-4 relative z-10 border-4 border-background`}
+                  className="w-20 h-20 rounded-3xl bg-gold/20 flex items-center justify-center mb-4 relative z-10 border-4 border-background"
                 >
-                  <item.icon className={`w-8 h-8 ${item.colorClass}`} />
+                  <item.icon className="w-8 h-8 text-gold" />
                 </motion.div>
                 
                 {/* Step number */}
-                <span className={`text-xs font-mono font-bold ${item.colorClass} mb-2`}>
+                <span className="text-xs font-mono font-bold text-gold mb-2">
                   Step {item.step}
                 </span>
                 
@@ -130,11 +120,11 @@ export function HowItWorksSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-card rounded-2xl p-5 flex items-start gap-4"
               >
-                <div className={`w-14 h-14 rounded-2xl ${item.bgClass} flex items-center justify-center shrink-0`}>
-                  <item.icon className={`w-6 h-6 ${item.colorClass}`} />
+                <div className="w-14 h-14 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0">
+                  <item.icon className="w-6 h-6 text-gold" />
                 </div>
                 <div>
-                  <span className={`text-xs font-mono font-bold ${item.colorClass}`}>
+                  <span className="text-xs font-mono font-bold text-gold">
                     Step {item.step}
                   </span>
                   <h3 className="font-bold text-lg text-foreground">{item.title}</h3>
