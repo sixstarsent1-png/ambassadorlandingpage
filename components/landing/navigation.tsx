@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Markets", href: "#markets" },
 ]
 
-const APPLY_URL = "https://sixstarent.com/ambassador-sign-up/"
+const APPLY_URL = "https://sixstars-creator.vercel.app/apply"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)

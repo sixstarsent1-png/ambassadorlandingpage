@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Star, Instagram, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const APPLY_URL = "https://sixstarent.com/ambassador-sign-up/"
+const APPLY_URL = "https://sixstars-creator.vercel.app/apply"
 
 export function Footer() {
   return (

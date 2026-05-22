@@ -110,9 +110,9 @@ export function HeroSection() {
             <Button 
               asChild 
               size="lg" 
-              className="h-14 px-10 text-lg font-bold bg-gradient-to-r from-neon-gold via-neon-amber to-neon-gold bg-[length:200%_100%] hover:bg-[position:100%_0] transition-all duration-500 text-background border-0 glow-gold"
+              className="h-14 px-10 text-lg font-bold bg-gradient-to-r from-neon-gold via-neon-amber to-neon-gold bg-[length:200%_100%] hover:bg-[position:100%_0] transition-all duration-500 text-black border-0 glow-gold"
             >
-              <a href="https://sixstarent.com/ambassador-sign-up/" target="_blank" rel="noopener noreferrer">
+              <a href="https://sixstars-creator.vercel.app/apply" target="_blank" rel="noopener noreferrer">
                 <Sparkles className="w-5 h-5 mr-2" />
                 Apply Now
               </a>
