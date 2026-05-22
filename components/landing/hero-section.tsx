@@ -107,11 +107,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <Button 
-              asChild 
-              size="lg" 
-              className="h-14 px-10 text-lg font-bold bg-gradient-to-r from-neon-gold via-neon-amber to-neon-gold bg-[length:200%_100%] hover:bg-[position:100%_0] transition-all duration-500 text-black border-0 glow-gold"
-            >
+            <Button asChild variant="gold" size="lg" className="h-14 px-10 text-lg">
               <a href="https://sixstars-creator.vercel.app/apply" target="_blank" rel="noopener noreferrer">
                 <Sparkles className="w-5 h-5 mr-2" />
                 Apply Now

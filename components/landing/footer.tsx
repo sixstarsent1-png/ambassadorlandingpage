@@ -36,11 +36,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-black font-bold px-10 py-6 text-lg glow-gold"
-            >
+            <Button asChild variant="gold" size="lg">
               <a href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply Now</a>
             </Button>
           </motion.div>

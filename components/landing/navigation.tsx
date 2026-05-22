@@ -75,10 +75,7 @@ export function Navigation() {
           </div>
 
           <div className="hidden md:block">
-            <Button 
-              asChild 
-              className="bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-black font-bold px-6 glow-gold"
-            >
+            <Button asChild variant="gold" size="default">
               <a href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply Now</a>
             </Button>
           </div>
@@ -138,10 +135,7 @@ export function Navigation() {
                     {link.name}
                   </motion.a>
                 ))}
-                <Button 
-                  asChild 
-                  className="w-full bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-black font-bold mt-2"
-                >
+                <Button asChild variant="gold" className="w-full mt-2">
                   <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>Apply Now</a>
                 </Button>
               </div>
@@ -156,10 +150,7 @@ export function Navigation() {
         animate={{ y: 0 }}
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden p-4 glass-card border-t border-border/50"
       >
-        <Button 
-          asChild 
-          className="w-full h-12 text-base font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-[length:200%_100%] animate-pulse text-black"
-        >
+        <Button asChild variant="gold" className="w-full h-12 text-base">
           <a href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply to Become an Ambassador</a>
         </Button>
       </motion.div>
