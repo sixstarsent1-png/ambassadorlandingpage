@@ -3,14 +3,14 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
-import { Play, Sparkles, Star, Zap, Heart } from "lucide-react"
+import { Play, Sparkles, Star } from "lucide-react"
 
 const images = [
-  { src: "/images/party-1.jpg", alt: "Festival friends", span: "col-span-2 row-span-2" },
-  { src: "/images/party-2.jpg", alt: "Nightclub scene", span: "col-span-1 row-span-1" },
-  { src: "/images/party-3.jpg", alt: "Beach party", span: "col-span-1 row-span-1" },
+  { src: "/images/party-1.jpg", alt: "Day party vibes", span: "col-span-2 row-span-2" },
+  { src: "/images/party-2.jpg", alt: "HBCU homecoming", span: "col-span-1 row-span-1" },
+  { src: "/images/party-3.jpg", alt: "VIP nightlife", span: "col-span-1 row-span-1" },
   { src: "/images/party-4.jpg", alt: "Rooftop party", span: "col-span-1 row-span-2" },
-  { src: "/images/party-5.jpg", alt: "Pool party", span: "col-span-2 row-span-1" },
+  { src: "/images/party-5.jpg", alt: "All white party", span: "col-span-2 row-span-1" },
 ]
 
 const floatingStickers = [
@@ -18,7 +18,7 @@ const floatingStickers = [
   { icon: "⚡", top: "20%", right: "8%", delay: 0.2 },
   { icon: "🎉", bottom: "30%", left: "3%", delay: 0.4 },
   { icon: "✨", bottom: "15%", right: "5%", delay: 0.6 },
-  { icon: "🌴", top: "40%", left: "2%", delay: 0.8 },
+  { icon: "🏆", top: "40%", left: "2%", delay: 0.8 },
 ]
 
 export function ImageShowcase() {
@@ -69,14 +69,14 @@ export function ImageShowcase() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
           >
-            <Play className="w-4 h-4 text-neon-pink" />
-            <span className="text-xs font-bold uppercase tracking-widest text-neon-pink">The Vibe</span>
+            <Play className="w-4 h-4 text-gold" />
+            <span className="text-xs font-bold uppercase tracking-widest text-gold">The Vibe</span>
           </motion.div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-balance">
-            This is <span className="text-neon-pink">Six Stars</span>
+            This is <span className="text-gold">Six Stars</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            From pool parties to festivals, rooftops to nightclubs — we create the moments that matter.
+            From day parties to festivals, rooftops to nightclubs — we create the moments that matter.
           </p>
         </motion.div>
 
@@ -114,9 +114,9 @@ export function ImageShowcase() {
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
                 <motion.div 
                   whileHover={{ rotate: 180 }}
-                  className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                  className="w-8 h-8 rounded-full bg-gold/20 backdrop-blur-sm flex items-center justify-center"
                 >
-                  <Sparkles className="w-4 h-4 text-white" />
+                  <Star className="w-4 h-4 text-gold fill-gold" />
                 </motion.div>
               </div>
             </motion.div>
@@ -130,13 +130,13 @@ export function ImageShowcase() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-wrap justify-center gap-3 mt-8"
         >
-          {["#SixStarsLife", "#NightlifeVibes", "#FestivalSeason", "#PartyPeople", "#VIPAccess"].map((tag, index) => (
+          {["#SixStarsLife", "#DayPartyVibes", "#HBCUCulture", "#VIPAccess", "#BlackExcellence"].map((tag) => (
             <motion.span
               key={tag}
               whileHover={{ scale: 1.1, y: -3 }}
-              className="px-4 py-2 rounded-full glass-card text-sm font-bold cursor-pointer hover:border-neon-pink/50 transition-colors"
+              className="px-4 py-2 rounded-full glass-card text-sm font-bold cursor-pointer hover:border-gold/50 transition-colors"
             >
-              <span className="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan bg-clip-text text-transparent">
+              <span className="text-gold">
                 {tag}
               </span>
             </motion.span>
